@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Niraja Tammireddi | Personal Profile</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #111827;
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 20px rgba(0,0,0,0.4);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #22d3ee;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e5e7eb;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #22d3ee;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            min-height: 92vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(circle at top left, #312e81, transparent 40%),
+                radial-gradient(circle at bottom right, #164e63, transparent 40%),
+                #0b1120;
+
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+
+            background: linear-gradient(
+                90deg,
+                #22d3ee,
+                #818cf8
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 28px;
+            margin: 6px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            background: #22d3ee;
+            color: #0b1120;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(34,211,238,0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #22d3ee;
+            border: 2px solid #22d3ee;
+        }
+
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+
+            font-size: 38px;
+
+            margin-bottom: 45px;
+
+            color: #22d3ee;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            color: #cbd5e1;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education-card {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            background: #111827;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            border: 1px solid #1e3a5f;
+
+            text-align: center;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            border-color: #22d3ee;
+        }
+
+        .education-card h3 {
+            color: #818cf8;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill {
+
+            background: #111827;
+
+            padding: 22px;
+
+            text-align: center;
+
+            border-radius: 14px;
+
+            font-weight: bold;
+
+            border: 1px solid #1e3a5f;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+
+            transform: translateY(-7px);
+
+            background: #164e63;
+
+            border-color: #22d3ee;
+
+            color: #22d3ee;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+        }
+
+        .project-card {
+
+            background: #111827;
+
+            padding: 32px;
+
+            border-radius: 18px;
+
+            border: 1px solid #1e3a5f;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #818cf8;
+        }
+
+        .project-card h3 {
+
+            color: #818cf8;
+
+            margin-bottom: 15px;
+
+            font-size: 23px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+        }
+
+        .tech {
+
+            margin-top: 18px;
+
+            color: #22d3ee !important;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= STRENGTHS ================= */
+
+        .strengths-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .strength {
+
+            background: #111827;
+
+            padding: 28px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border: 1px solid #1e3a5f;
+
+            transition: 0.3s;
+        }
+
+        .strength:hover {
+
+            transform: translateY(-6px);
+
+            border-color: #22d3ee;
+        }
+
+        .strength h3 {
+
+            color: #22d3ee;
+
+            margin-bottom: 10px;
+        }
+
+        .strength p {
+            color: #cbd5e1;
+        }
+
+
+        /* ================= ACHIEVEMENTS ================= */
+
+        .achievements {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            background: #111827;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            border: 1px solid #1e3a5f;
+        }
+
+        .achievements li {
+
+            margin: 15px 0;
+
+            color: #cbd5e1;
+        }
+
+
+        /* ================= CAREER ================= */
+
+        .career {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            color: #cbd5e1;
+
+            background: #111827;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            border: 1px solid #1e3a5f;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #172554
+                );
+        }
+
+        .contact p {
+
+            margin: 15px 0;
+
+            font-size: 18px;
+
+            color: #cbd5e1;
+        }
+
+        .contact a {
+
+            color: #22d3ee;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            color: #818cf8;
+        }
+
+
+        /* ================= SOCIAL BUTTONS ================= */
+
+        .social-buttons {
+            margin-top: 30px;
+        }
+
+        .social {
+
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            margin: 6px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border: 1px solid #22d3ee;
+
+            color: #22d3ee;
+
+            transition: 0.3s;
+        }
+
+        .social:hover {
+
+            background: #22d3ee;
+
+            color: #0b1120;
+
+            transform: translateY(-4px);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            background: #020617;
+
+            color: #94a3b8;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav ul {
+
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            Niraja.
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Hi, I'm Niraja 👋
+            </h1>
+
+            <h2>
+                B.Tech Computer Science Student
+            </h2>
+
+            <p>
+                I am a Computer Science and System Engineering student
+                interested in software development, problem-solving,
+                and building useful technology solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <h2>
+            About Me
+        </h2>
+
+        <div class="about">
+
+            <p>
+                I am currently pursuing my B.Tech in Computer Science
+                and System Engineering at Lendi Institute of Engineering
+                and Technology.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy learning new technologies, solving problems,
+                and developing projects that have practical uses.
+                I continuously work on improving my technical skills,
+                communication skills, and teamwork.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <h2>
+            Education
+        </h2>
+
+        <div class="education-card">
+
+            <h3>
+                B.Tech – Computer Science and System Engineering
+            </h3>
+
+            <p>
+                <strong>
+                    Lendi Institute of Engineering and Technology
+                </strong>
+            </p>
+
+            <p>
+                2024 – 2028
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2>
+            Technical Skills
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">C</div>
+
+            <div class="skill">Python</div>
+
+            <div class="skill">Java</div>
+
+            <div class="skill">Data Structures</div>
+
+            <div class="skill">DBMS</div>
+
+            <div class="skill">Operating Systems</div>
+
+            <div class="skill">HTML</div>
+
+            <div class="skill">CSS</div>
+
+            <div class="skill">JavaScript</div>
+
+            <div class="skill">React.js</div>
+
+            <div class="skill">Node.js</div>
+
+            <div class="skill">MongoDB</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2>
+            My Projects
+        </h2>
+
+        <div class="projects-container">
+
+
+            <div class="project-card">
+
+                <h3>
+                    Campus Alert System
+                </h3>
+
+                <p>
+                    A college event and notification platform that
+                    helps students discover campus events and receive
+                    important updates in one place.
+                </p>
+
+                <p class="tech">
+                    Technologies:
+                    React.js, Node.js, Express.js,
+                    MongoDB, Socket.io
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Gaming Education Website
+                </h3>
+
+                <p>
+                    An interactive educational website that combines
+                    learning with gaming to make the learning experience
+                    more interesting and engaging.
+                </p>
+
+                <p class="tech">
+                    Technologies:
+                    HTML, CSS, JavaScript
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STRENGTHS ================= -->
+
+    <section>
+
+        <h2>
+            My Strengths
+        </h2>
+
+        <div class="strengths-container">
+
+
+            <div class="strength">
+
+                <h3>
+                    💪 Hardworking
+                </h3>
+
+                <p>
+                    I stay committed to completing the work I start.
+                </p>
+
+            </div>
+
+
+            <div class="strength">
+
+                <h3>
+                    🎯 Persistent
+                </h3>
+
+                <p>
+                    I keep trying even when I face difficulties.
+                </p>
+
+            </div>
+
+
+            <div class="strength">
+
+                <h3>
+                    🤝 Responsible
+                </h3>
+
+                <p>
+                    I take responsibility for my tasks and support my team.
+                </p>
+
+            </div>
+
+
+            <div class="strength">
+
+                <h3>
+                    🧠 Quick Learner
+                </h3>
+
+                <p>
+                    I enjoy learning new technologies and concepts.
+                </p>
+
+            </div>
+
+
+            <div class="strength">
+
+                <h3>
+                    💡 Problem Solver
+                </h3>
+
+                <p>
+                    I like finding practical solutions to problems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section>
+
+        <h2>
+            Achievements & Activities
+        </h2>
+
+        <div class="achievements">
+
+            <ul>
+
+                <li>
+                    Participated in Smart India Hackathon (SIH).
+                </li>
+
+                <li>
+                    Developed academic and personal projects.
+                </li>
+
+                <li>
+                    Participated in college technical activities.
+                </li>
+
+                <li>
+                    Worked on improving technical and communication skills.
+                </li>
+
+                <li>
+                    Completed relevant internships and learning programs.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CAREER ================= -->
+
+    <section>
+
+        <h2>
+            My Career Goal
+        </h2>
+
+        <div class="career">
+
+            <p>
+
+                My goal is to become a skilled software engineer.
+                I want to continuously improve my technical knowledge,
+                work on challenging problems, and develop innovative
+                applications that are useful to people and society.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>
+            Let's Connect
+        </h2>
+        <div class="social-buttons">
+
+            <a
+                class="social"
+                href="https://github.com/Tammireddi-Niraja"
+                target="_blank"
+            >
+                💻 GitHub
+<p>
+    📧 Email:
+    <a href="mailto:nirajathammireddi@gmail.com">
+        nirajathammireddi@gmail.com
+    </a>
+</p>
+
+            <a
+                class="social"
+                href="https://www.linkedin.com/in/niraja-thammireddi-b62216321/"
+                target="_blank"
+            >
+                🔗 LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Niraja Tammireddi | Personal Profile
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
